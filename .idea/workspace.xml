@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeb5c955-6d1d-4ee4-b9b7-4a422e2be447" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialpupy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/socialpupy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialpupy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/socialpupy/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/socialpupy/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#634#666#0" expanded="true" />
               </folding>
@@ -41,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -71,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/users/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -121,6 +123,11 @@
             <path>
               <item name="dev" type="b2602c69:ProjectViewProjectNode" />
               <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dev" type="b2602c69:ProjectViewProjectNode" />
@@ -198,16 +205,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549218975895</updated>
-      <workItem from="1549218977081" duration="1752000" />
+      <workItem from="1549218977081" duration="1869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1752000" />
+    <option name="totallyTimeSpent" value="1869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="497" y="70" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
@@ -239,7 +245,7 @@
     <entry file="file://$PROJECT_DIR$/socialpupy/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#634#666#0" expanded="true" />
           </folding>
@@ -263,7 +269,7 @@
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -273,7 +279,7 @@
     <entry file="file://$PROJECT_DIR$/users/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
