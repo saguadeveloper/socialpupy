@@ -11,4 +11,8 @@ class Profile(models.Model):
     phone_number = models.CharField(blank=True, max_length=20)
     description = models.TextField(blank=True)
     photo = models.ImageField(upload_to='users/pictures', blank=True, null=True)
-    last_login = models
+    notification = models.BooleanField(default=False)
+    # MetaData
+    last_login = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
