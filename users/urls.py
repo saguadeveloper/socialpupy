@@ -3,9 +3,9 @@ from users import views
 
 urlpatterns = [
     path(
-        route='login',
+        route='',
         view=views.LoginView.as_view(),
-        name='login'
+        name='index'
     )
 
 ]
