@@ -1,3 +1,8 @@
+
+db.sqlite3
+.idea
+/.idea/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -32,9 +37,6 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
-/.idea/*
-.idea
-db.sqlite3
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -93,7 +95,6 @@ celerybeat-schedule
 # Environments
 .env
 .venv
-.idea
 env/
 venv/
 ENV/
