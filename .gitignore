@@ -33,6 +33,7 @@ MANIFEST
 *.manifest
 *.spec
 /.idea/*
+.idea
 db.sqlite3
 # Installer logs
 pip-log.txt
