@@ -19,6 +19,7 @@
   <!-- Custom fonts for this template -->
   <link href="{% static 'css/all.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -30,11 +31,15 @@
 </head>
 
 <body id="page-top">
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock %}
 
-  {% include 'nav.html' %}
+  {% block container %}
 
   {% include 'main_container.html' %}
 
+  {% endblock %}
   {% block footer %}
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
@@ -46,7 +51,7 @@
 
   {% endblock %}
 
-  {% block js %}
+
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
@@ -56,8 +61,10 @@
 
   <!-- Custom scripts for this template -->
   <script src="{% static 'js/grayscale.min.js' %}"></script>
-  {% render_bundle 'main' %}
+  {% block js %}
+    {% render_bundle 'main' %}
   {% endblock %}
+  {% block js %}{% endblock %}
 </body>
 
 </html>

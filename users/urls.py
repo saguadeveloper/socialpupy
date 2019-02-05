@@ -4,8 +4,18 @@ from users import views
 urlpatterns = [
     path(
         route='',
-        view=views.LoginView.as_view(),
+        view=views.index,
         name='index'
-    )
+    ),
+    path(
+        route='login',
+        view=views.login_view,
+        name='login'
+    ),
+    path(
+        route='register',
+        view=views.register,
+        name='register'
+    ),
 
 ]
