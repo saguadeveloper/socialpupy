@@ -16,3 +16,7 @@ class Profile(models.Model):
     last_login = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        """Return email."""
+        return self.user.email
