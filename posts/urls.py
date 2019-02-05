@@ -6,6 +6,6 @@ urlpatterns = [
     path(
         route='',
         view=views.DashboardView.as_view(),
-        name='dashboard'
+        name='components'
     ),
 ]
