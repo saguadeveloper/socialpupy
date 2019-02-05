@@ -1,0 +1,9 @@
+#react > h1 {
+  background-color: #1c606a; }
+
+body {
+  font-family: verdana, sans-serif;
+  background-color: #f3e2c7; }
+  body h1, body h2 {
+    color: #b68d4c; }
+

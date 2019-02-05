@@ -2,6 +2,8 @@
 db.sqlite3
 .idea
 /.idea/*
+node_modules/
+node_modules/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
