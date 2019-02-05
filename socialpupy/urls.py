@@ -20,4 +20,5 @@ from users import views as users_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('users.urls', 'users'), namespace='users')),
+    path('posts/', include(('posts.urls', 'posts'), namespace="posts"))
 ]
