@@ -1,9 +1,12 @@
 # Django
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.contrib.auth import views as auth_views, authenticate, login
+from django.views.generic import UpdateView
+from django.urls import reverse_lazy
 
 
 from users.form import RegisterForm
+from users.models import Profile
 
 
 # Create your views here.
@@ -13,7 +16,6 @@ def index(request):
 
 # class LoginView(auth_views.LoginView):
 #     template_name = 'users/login.html'
-#     success_url = reverse_lazy('users:index')
 
 
 def login_view(request):
@@ -24,9 +26,9 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            return HttpResponse('jafbsdjfbasdfbjhsdfjhbsdfkjasdkjbhsdfbkjdssbkjdsbfjdbn')
+            return redirect('posts:dashboard')
         else:
-            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+            return render(request, 'users/login.html', {'error': 'Invalid username/password'})
 
     return render(request, 'users/login.html')
 
@@ -43,7 +45,6 @@ def register(request):
         'form': form
     })
 
-
 # class RegisterView(FormView):
 #     template_name = "users/register.html"
 #     form_class = RegisterForm
@@ -52,3 +53,19 @@ def register(request):
 #     def form_valid(self, form):
 #         form.save()
 #         return super().form_valid(form)
+
+
+class LogoutView(auth_views.LogoutView):
+    pass
+
+
+class UpdateProfileView(UpdateView):
+    template_name = 'dashboard/includes/profile.html'
+    model = Profile
+    fields = ['notification', 'phone_number', 'description', 'photo']
+
+    def get_object(self):
+        return self.request.user.profile
+
+    def get_success_url(self):
+        return reverse_lazy('posts:dashboard')
