@@ -1,9 +1,54 @@
 # Django
-from django.shortcuts import render
+from django.shortcuts import render, redirect, HttpResponse
+from django.contrib.auth import views as auth_views, authenticate, login
 
-from django.contrib.auth import views as auth_views
+
+from users.form import RegisterForm
 
 
 # Create your views here.
-class LoginView(auth_views.LoginView):
-    template_name = 'index.html'
+def index(request):
+    return render(request, 'index.html')
+
+
+# class LoginView(auth_views.LoginView):
+#     template_name = 'users/login.html'
+#     success_url = reverse_lazy('users:index')
+
+
+def login_view(request):
+    """Login view."""
+    if request.method == 'POST':
+        username = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user:
+            login(request, user)
+            return HttpResponse('jafbsdjfbasdfbjhsdfjhbsdfkjasdkjbhsdfbkjdssbkjdsbfjdbn')
+        else:
+            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+
+    return render(request, 'users/login.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form .save()
+            return redirect('users:login')
+    else:
+        form = RegisterForm()
+    return render(request, 'users/register.html', context={
+        'form': form
+    })
+
+
+# class RegisterView(FormView):
+#     template_name = "users/register.html"
+#     form_class = RegisterForm
+#     success_url = reverse_lazy('users:login')
+#
+#     def form_valid(self, form):
+#         form.save()
+#         return super().form_valid(form)
