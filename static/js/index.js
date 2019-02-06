@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './../css/app.css'
 import '../css/appStyles.scss';
-import Dashboard from './components/dashboard'
+import Dashboard from './components/dashboard/dashboard'
 
 function App(props) {
     let landing_url = ['/','login','about','contact'];
