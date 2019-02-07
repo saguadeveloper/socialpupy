@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +44,8 @@ INSTALLED_APPS = [
     'posts',
 
     # Third Party Apps
-    'webpack_loader'
+    'webpack_loader',
+    'django_pdb'
 
 ]
 
@@ -62,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_pdb.middleware.PdbMiddleware',
 ]
 
 ROOT_URLCONF = 'socialpupy.urls'
@@ -147,3 +150,5 @@ MEDIA_URL = '/media/'
 # LOGIN_URL = 'login'
 # LOGIN_REDIRECT_URL = 'register'
 LOGOUT_REDIRECT_URL = '/login'
+
+SYSTEM_NAME = "Social Puppy"

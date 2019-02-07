@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import views as auth_views, authenticate, login
 from django.views.generic import UpdateView
 from django.urls import reverse_lazy
-
+import os
+from django.conf import settings
 
 from users.form import RegisterForm
 from users.models import Profile
@@ -11,7 +12,7 @@ from users.models import Profile
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'system_name': settings.SYSTEM_NAME})
 
 
 # class LoginView(auth_views.LoginView):
@@ -29,7 +30,6 @@ def login_view(request):
             return redirect('posts:dashboard')
         else:
             return render(request, 'users/login.html', {'error': 'Invalid username/password'})
-
     return render(request, 'users/login.html')
 
 
