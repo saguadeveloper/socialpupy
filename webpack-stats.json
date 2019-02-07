@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"status":"done","chunks":{"main":[{"name":"main.css","path":"C:\\pack\\port\\django\\socialpupy\\static\\bundles\\main.css"},{"name":"main.js","path":"C:\\pack\\port\\django\\socialpupy\\static\\bundles\\main.js"}]}}
+=======
+{"status":"done","chunks":{"main":[{"name":"main.css","path":"/Users/yosvany/Desktop/SaguaDev/socialpupy/static/bundles/main.css"},{"name":"main.js","path":"/Users/yosvany/Desktop/SaguaDev/socialpupy/static/bundles/main.js"}]}}
+>>>>>>> b7c5bd7e9e8377ca41ac51d5445d845e19139e9f
