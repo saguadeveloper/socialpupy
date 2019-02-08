@@ -27,7 +27,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            return redirect('posts:dashboard')
+            return redirect('posts:components')
         else:
             return render(request, 'users/login.html', {'error': 'Invalid username/password'})
     return render(request, 'users/login.html')
@@ -63,9 +63,7 @@ class UpdateProfileView(UpdateView):
     template_name = 'dashboard/includes/profile.html'
     model = Profile
     fields = ['notification', 'phone_number', 'description', 'photo']
+    success_url = reverse_lazy('posts:components')
 
     def get_object(self):
         return self.request.user.profile
-
-    def get_success_url(self):
-        return reverse_lazy('posts:dashboard')
