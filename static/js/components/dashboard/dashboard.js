@@ -6,7 +6,7 @@ class Dashboard extends Component{
 
     render () {
         return (
-            <div>
+            <div id="wrapper">
                 <Sidebar/>
                 <ContentWrapper/>
             </div>

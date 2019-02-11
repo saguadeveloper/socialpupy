@@ -14,37 +14,37 @@
         <form class="user" action="{% url 'users:update_profile' %}" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="media">
-               {% if user.profile.photo %}
-                  <img src="{{ user.profile.photo.url }}" class="rounded-circle" height="50"/>
-               {% else %}
-                   <img src="{% static 'img/default-profile.png' %}" class="rounded-circle" height="50"/>
-               {% endif %}
+{#               {% if user.profile.photo %}#}
+{#                  <img src="{{ user.profile.photo.url }}" class="rounded-circle" height="50"/>#}
+{#               {% else %}#}
+{#                   <img src="{% static 'img/default-profile.png' %}" class="rounded-circle" height="50"/>#}
+{#               {% endif %}#}
 
                <div class="media-body">
-                   <h5 class="ml-4">{{ user.get_full_name }}</h5>
+                   <h5 class="ml-4">Test{% comment %}{{ user.get_full_name }}{% endcomment %}</h5>
                    <p class="ml-4"><input type="file" name="photo"></p>
                </div>
 
           </div>
           <div class="form-group">
             <label for="description" class="col-form-label">Description:</label>
-            <textarea class="form-control" name="description">{{ user.profile.description }}</textarea>
+            <textarea class="form-control" name="description">Test{% comment %}{{ user.profile.description }}{% endcomment %}</textarea>
           </div>
           <div class="form-group">
             <label for="phone-number" class="col-form-label">Phone Number:</label>
-            <input type="text" class="form-control" name="phone_number" value="{{ user.profile.phone_number }}">
+            <input type="text" class="form-control" name="phone_number" value="{% comment %}{{ user.profile.phone_number }}{% endcomment %}Test">
           </div>
-          {% if user.profile.notification %}
-            <div class="form-group">
-                <label for="receive-notification" class="col-form-label">Receive notification:</label>
-                <input type="checkbox" class="form-control" name="notification" checked>
-            </div>
-          {% else %}
+{#          {% if user.profile.notification %}#}
+{#            <div class="form-group">#}
+{#                <label for="receive-notification" class="col-form-label">Receive notification:</label>#}
+{#                <input type="checkbox" class="form-control" name="notification" checked>#}
+{#            </div>#}
+{#          {% else %}#}
             <div class="form-group">
                 <label for="receive-notification" class="col-form-label">Receive notification:</label>
                 <input type="checkbox" class="form-control" name="notification">
             </div>
-          {% endif %}
+          {% comment %}{% endif %}{% endcomment %}
           <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-primary">Update info!</button>

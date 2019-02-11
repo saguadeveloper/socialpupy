@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --progress --colors --mode development",
-    "watch": "webpack --config webpack.config.js --watch --mode development"
+    "watch": "webpack --config webpack.config.js --watch --colors --mode development"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.2.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }

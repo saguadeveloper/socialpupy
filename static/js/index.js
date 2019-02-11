@@ -29,9 +29,5 @@ function App(props) {
     );
 
 }
-
 const element = <App />;
-ReactDOM.render(
-    element,
-    document.getElementById('react')
-);
+ReactDOM.render(element,document.getElementById('react'));
